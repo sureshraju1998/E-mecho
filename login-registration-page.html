@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>E-mecho login-page</title>
+    <link type="text/css" rel="stylesheet" href="E-mecho.css"/>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+</head>
+<body>
+    <div class="login-page col-xs-12">
+        <div class="col-xs-12 login-block">
+            <div class="btn-block">
+                <div id="btn"></div>
+                <button id="login-tab" class="btn-toggle" type="button" onclick="login()">LOG IN</button>
+                <button id="register-tab" class="btn-toggle" type="button" onclick="register()">REGISTER</button>
+            </div>
+            <form id="login" class="form-block">
+                <div class="input-container">
+                    <input type="text" name="username" class="input-field" placeholder="username" required>
+                    <i class="fa fa-user icon "aria-hidden></i>
+                </div>
+                <div class="input-container">
+                    <input type="password" name="password" class="input-field" id="myInput" placeholder="enter new password" required>
+                    <i class="fa fa-key icon"></i>
+                    <a href="#"><i class="fa fa-eye" id="icon1" aria-hidden="true"  onclick="myFunction()"></i></a>
+                </div>
+                <div class="forget-password"><a href="#" style="text-decoration:none">forget password?</a></div>
+                <button type="submit" class="submit-btn">LOGIN</button>
+            </form>  
+            
+            
+
+            <div id="register" class="form-block">
+                <div id="selector-block">
+                    <div id="btn1"></div>
+                    <button id="user-tab" class="select-toggle" type="button" onclick="user()">USER</button>
+                    <button id="partner-tab" class="select-toggle" type="button" onclick="partner()">PARTNER</button>
+                </div>
+
+                <form id="user" class="form" action="/" method="post">
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="username" required>
+                        <i class="fa fa-user icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="number" class="input-field" placeholder="contact number" required>
+                        <i class="fa fa-phone icon "aria-hidden></i>
+                        <i class="fa fa-phone" id="icon6" aria-hidden="true"></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="mail" class="input-field" placeholder="E-mail" required>
+                        <i class="fa fa-envelope icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" class="input-field" id="myInput2" placeholder="enter new password" required>
+                        <i class="fa fa-key icon"></i>
+                        <a href="#"><i class="fa fa-eye" id="icon2" aria-hidden="true"  onclick="myFunction2()"></i></a>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" class="input-field" id="myInput3" placeholder="re-enter password" required>
+                        <i class="fa fa-key icon"></i>
+                        <a href="#"><i class="fa fa-eye" id="icon3" aria-hidden="true"  onclick="myFunction3()"></i></a>
+                    </div>
+                    <input type="checkbox" class="check-box"><span class="span">Remember password</span><br>
+                    <input type="checkbox" class="check-box"><span class="span">I agree Terms and Conditions</span><br>
+                    <button type="submit" class="submit-btn" onclick="validate()">REGISTER</button>
+                </form>
+
+
+
+                <form id="partner">
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="username" required>
+                        <i class="fa fa-user icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="number" class="input-field" placeholder="personal number" required>
+                        <i class="fa fa-phone icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="number" class="input-field" placeholder="company number" required>
+                        <i class="fa fa-phone icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="mail" class="input-field" placeholder="E-mail" required>
+                        <i class="fa fa-envelope icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" class="input-field" id="myInput4" placeholder="enter new password" required>
+                        <i class="fa fa-key icon"></i>
+                        <a href="#"><i class="fa fa-eye" id="icon4" aria-hidden="true"  onclick="myFunction4()"></i></a>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" name="password" class="input-field" id="myInput5" placeholder="re-enter password" required>
+                        <i class="fa fa-key icon"></i>
+                        <a href="#"><i class="fa fa-eye" id="icon5" aria-hidden="true"  onclick="myFunction5()"></i></a>
+                    </div>
+                    <button type="button" id="partner-company-details-tab"class="submit-btn">NEXT</button>
+                </form>
+
+
+                <form id="partner-company-details">
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="company Name" required>
+                        <i class="fa fa-building icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="house No. , area name, locality" required>
+                        <i class="fa fa-address-book icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="landmark" required>
+                        <i class="fa fa-pencil icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" placeholder="state" required>
+                        <i class="fa fa-pencil icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" name="username" class="input-field" placeholder="pincode" required>
+                        <i class="fa fa-pencil icon "aria-hidden></i>
+                    </div>
+                    <div class="input-container">
+                        <input type="text" name="username" class="input-field" onclick="showPosition();" readonly required>
+                        <div  id="location-result"></div>
+                        <i class="fa fa-map-marker icon "aria-hidden></i>
+                    </div>
+                    <input type="checkbox" class="check-box"><span class="span">Remember password</span><br>
+                    <input type="checkbox" class="check-box"><span class="span">I agree Terms and Conditions</span><br>
+                    <button type="submit" class="submit-btn">REGISTER</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="E-mecho.js"></script>
+    <script src="validation.js"></script>
+    <script src="password-visible.js"></script>
+    <script>
+        function showPosition() {
+            if(navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    var positionInfo = position.coords.latitude + ", " + position.coords.longitude;
+                    document.getElementById("location-result").innerHTML = positionInfo;
+                });
+            } else {
+                alert("Sorry, your browser does not support HTML5 geolocation.");
+            }
+        } 
+    </script>
+
+</body>
+</html>
