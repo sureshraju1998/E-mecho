@@ -1,0 +1,232 @@
+* {
+  font-family: sans-serif;
+}
+
+.input-type-properties .input-container input[type=text], .form-block .input-container input[type=text], #user .input-container input[type=text], #partner .input-container input[type=text], #partner-company-details .input-container input[type=text] {
+  padding-left: 32px;
+  padding-bottom: 0px;
+}
+
+.input-type-properties .input-container input[type=password], .form-block .input-container input[type=password], #user .input-container input[type=password], #partner .input-container input[type=password], #partner-company-details .input-container input[type=password] {
+  padding-left: 32px;
+  padding-bottom: 0px;
+}
+
+.input-type-properties .input-container input[type=number], .form-block .input-container input[type=number], #user .input-container input[type=number], #partner .input-container input[type=number], #partner-company-details .input-container input[type=number] {
+  padding-left: 32px;
+  padding-bottom: 0px;
+}
+
+.login-page {
+  width: 100%;
+  height: 100%;
+  background: url("images/high-way-background.jpg");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+}
+
+.login-page .login-block {
+  width: 296px;
+  height: 519px;
+  margin-left: 486px;
+  margin-top: 76px;
+  overflow: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 24px;
+}
+
+.login-page .login-block .btn-block {
+  background-color: white;
+  margin: 10px auto;
+  border-radius: 30px;
+  width: 293px;
+  position: relative;
+  -webkit-box-shadow: 0 0 20px 9px #ff61241f;
+          box-shadow: 0 0 20px 9px #ff61241f;
+}
+
+.login-page .login-block .btn-block #btn {
+  position: absolute;
+  width: 142px;
+  height: 43px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff105f), to(#ffad06));
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.login-page .login-block .btn-block .btn-toggle {
+  padding: 10px 38px;
+  cursor: pointer;
+  background: transparent;
+  border: 0px;
+  outline: none;
+  position: relative;
+}
+
+.form-block {
+  top: 152px;
+  position: absolute;
+  width: 204px;
+  height: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  opacity: 0.8;
+}
+
+.form-block .forget-password {
+  top: -6px;
+  padding: 5px;
+  padding-left: 114px;
+  font-size: 11px;
+  position: relative;
+}
+
+.form-block .input-field {
+  width: 210px;
+  padding: 8px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  background: transparent;
+}
+
+.form-block .submit-btn {
+  width: 102%;
+  height: 40px;
+  padding: 8px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff105f), to(#ffad06));
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+.form-block .check-box {
+  margin: 11px 8px 7px 3px;
+}
+
+.form-block .span {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  bottom: 68px;
+}
+
+#login {
+  left: 510px;
+}
+
+#register {
+  display: none;
+  left: 510px;
+}
+
+#register .select-toggle {
+  width: 100px;
+  background: -webkit-gradient(linear, left top, right top, from(#FF00FF), to(#DDA0DD));
+  background: linear-gradient(to right, #FF00FF, #DDA0DD);
+  float: left;
+  position: relative;
+  top: -9px;
+  left: 17px;
+  padding: 2px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#register #partner-extended {
+  display: none;
+  position: fixed;
+}
+
+#user, #partner, #partner-company-details {
+  display: none;
+  padding-left: 10px;
+  width: 237px;
+}
+
+#user .input-field, #partner .input-field, #partner-company-details .input-field {
+  width: 210px;
+  padding: 8px 0;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 1px solid #999;
+  background: transparent;
+}
+
+#user .span, #partner .span, #partner-company-details .span {
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  bottom: 68px;
+}
+
+#user .submit-btn, #partner .submit-btn, #partner-company-details .submit-btn {
+  width: 102%;
+  height: 40px;
+  padding: 8px 30px;
+  cursor: pointer;
+  display: block;
+  margin: auto;
+  margin-top: 15px;
+  background: -webkit-gradient(linear, left top, right top, from(#ff105f), to(#ffad06));
+  background: linear-gradient(to right, #ff105f, #ffad06);
+  border: 0;
+  outline: none;
+  border-radius: 30px;
+}
+
+span {
+  padding: 5px;
+  min-width: 50px;
+}
+
+.input-container {
+  position: relative;
+  margin-bottom: -18px;
+}
+
+.input-container i {
+  color: #3167fc;
+  position: relative;
+  left: -5px;
+  padding: 4px 9px;
+  font-size: 23px;
+  top: -30px;
+}
+
+#icon1, #icon2, #icon3, #icon4, #icon5 {
+  position: relative;
+  left: 157px;
+  top: -29px;
+  cursor: pointer;
+  color: #6f6ff0;
+}
+
+#partner-company-details {
+  position: relative;
+  top: 12px;
+}
+
+#partner-company-details #location-result {
+  position: absolute;
+  width: 265px;
+  top: 10px;
+  left: 19px;
+  font-size: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: black;
+  font-weight: 500;
+}
+/*# sourceMappingURL=E-mecho.css.map */
