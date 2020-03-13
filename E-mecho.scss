@@ -1,0 +1,263 @@
+@mixin login-register-btn()
+{
+    position: absolute;
+    width:142px;
+    height:43px;
+    background:linear-gradient(to right, #ff105f,#ffad06);
+    border-radius:30px;
+    transition:0.5s;
+}
+@mixin submit-btn()
+{
+    width:102%;
+    height:40px;
+    padding:8px 30px;
+    cursor:pointer;
+    display:block;
+    margin:auto;
+    margin-top:15px;
+    background:linear-gradient(to right, #ff105f,#ffad06);
+    border:0;
+    outline:none;
+    border-radius:30px;
+}
+@mixin input-field()
+{
+    width:210px;
+    padding:8px 0;
+    border-left:0;
+    border-right:0;
+    border-top:0;
+    border-bottom:1px solid #999;
+    background:transparent;
+}
+@mixin span-class()
+{
+    color:black;
+    font-size:12px;
+    font-weight:bold;
+    bottom:68px;
+}
+@mixin input-type()
+{
+    padding-left:32px;
+    padding-bottom:0px;
+}
+*
+{
+    font-family: sans-serif;
+}
+.input-type-properties
+{
+    .input-container input[type=text]
+    {
+        @include input-type();
+    }
+    .input-container input[type=password]
+    {
+        @include input-type();
+    }
+    .input-container input[type=number]
+    {
+        @include input-type();
+    }
+}
+
+
+.login-page
+{
+    width:100%;
+    height:100%;
+    background:url("images/high-way-background.jpg");
+    background-position:center;
+    background-size:cover;
+    position:absolute;
+    .login-block
+    {
+        width:296px;
+        height:519px;
+        margin-left: 486px;
+        margin-top: 76px;
+        overflow: none;
+        background-color:rgba(255,255,255,0.4);
+        border-radius:24px;
+        .btn-block
+        {
+            background-color: white;
+            margin:10px auto;
+            border-radius:30px;
+            width:293px;
+            position:relative;
+            box-shadow:0 0 20px 9px #ff61241f;
+            #btn
+            {
+                @include login-register-btn();
+            }
+            .btn-toggle
+            {
+                padding: 10px 38px;
+                cursor :pointer;
+                background:transparent;
+                border:0px;
+                outline:none;
+                position:relative;
+            }
+        }
+    }
+}
+.form-block
+{
+    top:152px;
+    position: absolute;
+    width:204px;
+    height:30px;
+    transition: 0.5s;
+    opacity:0.8;
+    .forget-password
+    {
+        top: -6px;
+        padding: 5px;
+        padding-left: 114px;
+        font-size: 11px;
+        position: relative;
+    }
+    .input-field
+    {
+        @include input-field();
+    }
+    .submit-btn
+    {
+        @include submit-btn();
+    }
+    .check-box
+    {
+        margin:11px 8px 7px 3px;
+    }
+    .span
+    {
+        @include span-class();
+    }
+    @extend .input-type-properties;
+}
+
+
+
+
+
+
+#login
+{
+    left:510px;
+}
+#register
+{
+    display:none;
+    left:510px;
+    .select-toggle
+    {
+        width:100px;
+        background: linear-gradient(to right, #FF00FF,#DDA0DD);
+        float:left;
+        position: relative;
+        top: -9px;
+        left: 17px;
+        padding: 2px;
+        transition:0.5s;
+    } 
+    #partner-extended
+    {
+        display:none;
+        position:fixed;
+    }
+    
+}
+
+
+
+
+
+#user
+{
+    display:none;
+    padding-left:10px;
+    width: 237px;
+    .input-field
+    {
+        @include input-field();
+    }
+    .span
+    {
+        @include span-class();
+    }
+    .submit-btn
+    {
+        @include submit-btn();
+    }
+    @extend .input-type-properties;
+}
+#partner
+{
+    @extend #user;
+}
+span{
+    padding:5px;
+    min-width: 50px;
+}
+.input-container{
+    position:relative;
+    margin-bottom:-18px;
+}
+.input-container i{
+    color:rgb(49, 103, 252);
+    position: relative;
+    left: -5px;
+    padding: 4px 9px;
+    font-size: 23px;
+    top: -30px;
+}
+#icon1
+{
+    position: relative;
+    left: 157px;
+    top: -29px;
+    cursor: pointer;
+    color:rgb(111, 111, 240);
+}
+#icon2
+{
+    @extend #icon1;
+}
+#icon3
+{
+    @extend #icon1;   
+}
+#icon4
+{
+    @extend #icon1;    
+}
+#icon5
+{
+    @extend #icon1;    
+}
+
+
+#partner-company-details
+{
+    @extend #partner;
+    position: relative;
+    top:12px;
+    #location-result
+    {
+        position: absolute;
+        width: 265px;
+        top: 10px;
+        left: 19px;
+        font-size: 15px;
+    }
+}
+
+
+::-webkit-input-placeholder {
+    color:lighten($color: #000000, $amount: 0);
+    font-weight: 500;
+ }
